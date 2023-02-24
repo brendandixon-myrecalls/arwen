@@ -1,0 +1,453 @@
+<html style='font-size:10px;'>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Lato:200,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="file:///Users/brendan/Dropbox/Creative/Design/fontawesome-pro-5.7.2-web/css/all.css">
+        <style>
+            .brand {
+                display: inline-block;
+                padding: 0 15px 15px;
+                width: 100px;
+                vertical-align: top;
+            }
+            .category-icon {
+                position: relative;
+                width: 2em;
+                height: 2em;
+                font-size:2.4rem;
+            }
+            .category-icon-bottom {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .category-icon-top {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .category-icon-outer {
+                background-color: white;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                position: relative;
+                z-index:0;
+            }
+            .category-icon-icon {
+                color:#000;
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                z-index: 2;
+            }
+            .category-icon-inner {
+                border-radius: 50%;
+                width: 87%;
+                height: 87%;
+                position: absolute;
+                z-index:1;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+            }
+            .chart {
+                background-color: #fff;
+                display: inline-block;
+                padding: 0.5rem;
+                position: relative;
+                margin: 1rem;
+                min-width: 300px;
+                color: #000;
+                font-weight: 300;
+                border-radius: 4px;
+            }
+            .list {
+                font-size:1.6rem;
+                color: #6a6a6a;
+                width: 400px;
+            }
+            .list li {
+                margin-bottom:0.2em;
+            }
+            .list li i {
+                color: #17AF9B;
+                margin-right:0.5em;
+            }
+            .notes {
+                font-size:1.1rem;
+                color:#6a6a6a;
+                padding: 0;
+            }
+            .recall-description {
+                font-family: Lato;
+                font-size:1.4em;
+                font-weight: 200;
+                padding:0.5em 0.5em;
+                text-align: left;
+            }
+            .recall-title {
+                font-family: Lato;
+                font-size:1.6em;
+                letter-spacing: 0.05em;
+                padding:0.5em 0.5em;
+            }
+            .bottom-pane {
+                position:relative;
+                width:calc(100% - 1rem);
+                min-height:4rem;
+                margin-top:2.4rem;
+                padding: 0 0.5rem 0.5rem;
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                text-align: left;
+            }
+            .bottom-pane.expanded {
+                padding-top: 2.4rem;
+            }
+            .bottom-pane .actions {
+                font-size: 1.2rem;
+                padding:0.5em 0.5em;
+                position: relative;
+            }
+            .bottom-pane .actions a {
+                color: #17AF9B;
+                letter-spacing: 0.1em;
+                text-decoration: none;
+            }
+            .bottom-pane .more {
+                color: #17AF9B;
+                letter-spacing: 0.1em;
+                position: absolute;
+                right: 0.5rem;
+                bottom: 0.5rem;
+            }
+            .bottom-pane .summary {
+                color: #000000;
+                font-size: 1.2rem;
+                padding:0.5em 0.5em;
+            }
+            .bottom-pane .summary span {
+                color: #17AF9B;
+                letter-spacing: 0.1em;
+                text-transform: capitalize;
+            }
+            .bottom-pane .effective {
+                position: absolute;
+                top: 0;
+                right: 0.5rem;
+            }
+            .bottom-pane.expanded .summary {
+                color: white;
+                font-size: 1.2rem;
+                bottom: 0.5rem;
+                left: 0.5rem;
+                position: absolute;
+            }
+            .bottom-pane.expanded .summary span {
+                color: white;
+            }
+            .top-pane {
+                position:relative;
+                width: calc(100% - 1rem);
+                min-height:4rem;
+                margin-bottom:2.4rem;
+                padding: 0.5rem 0.5rem 0;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+            }
+            .top-pane.expanded {
+                padding-bottom: 2.4rem;
+            }
+            .title {
+                font-size: 4rem;
+                text-align: center;
+                font-weight: 300;
+                margin-bottom: 0.5rem;
+            }
+            .value {
+                background-color: #6a6a6a;
+                padding: 0.6em 0.4rem;
+                margin: 0 0.2em 0.2rem;
+                font-size: 2rem;
+                color: white;
+                white-space: nowrap;
+                overflow: hidden;
+                position: relative;
+                z-index: 1;
+                border-radius: 4px;
+            }
+            .value span {
+                font-size: 0.7em;
+                font-weight: 200;
+            }
+            .probable {
+                background-color: #e00020;
+            }
+            .possible {
+                /* background-color: #F5A623; */
+                background-color: #FFA847;
+            }
+            .none {
+                /* background-color: #6A6A6A; */
+                background-color: #17AF9B;
+            }
+            .drugs {
+                background-color: #729BFF;
+            }
+            .drugs-light {
+                background-color: #EAF0FF;
+            }
+            .electronics {
+                background-color: #FFA847;
+            }
+            .electronics-light {
+                background-color: #FFE9D3;
+            }
+            .food {
+                background-color: #17AF9B;
+            }
+            .food-light {
+                background-color: #E8FAF6;
+            }
+            .home {
+                background-color: #C57ED4;
+            }
+            .bignumber {
+                margin: -1.5em 0 1.5rem;
+            }
+            .bignumber div {
+                text-align: center;
+                font-size: 6rem;
+                font-weight: 300;
+            }
+            .inverted {
+                background-color: transparent;
+                position: absolute;
+                color: #000;
+                z-index: 0;
+            }
+            .waiting {
+                color: #729BFF;
+                display: inline-block;
+                font-size: 5.5rem;
+            }
+        </style>
+    </head>
+    <body style='font-family: Lato; font-weight: 200; color: #fff; background-color: #414141;'>
+        <h1>Charts</h1>
+        <div class='chart'>
+            <div class='title'>Alerts Sent</div>
+            <div class='bignumber'>
+                <div>54</div>
+            </div>
+            <div style='position: relative'>
+                <div class='value drugs inverted'>By Email <span>(54 Recalls)</span></div>
+                <div class='value drugs'>By Email <span>(54 Recalls)</span></div>
+            </div>
+            <div style='position: relative'>
+                <div class='value food inverted'>By Text <span>(10 Recalls)</span></div>
+                <div class='value food' style='width:19%'>By Text <span>(10 Recalls)</span></div>
+            </div>
+        </div>
+        <div class='chart'>
+            <div class='title'>Health Risk</div>
+            <div style='position: relative'>
+                <div class='value probable inverted'>Probable <span>(10 Recalls)</span></div>
+                <div class='value probable' style='width:31%;'>Probable <span>(10 Recalls)</span></div>
+            </div>
+            <div style='position: relative'>
+                <div class='value possible inverted'>Possible <span>(32 Recalls)</span></div>
+                <div class='value possible'>Possible <span>(32 Recalls)</span></div>
+            </div>
+            <div style='position: relative'>
+                <div class='value none inverted'>Minimal <span>(12 Recalls)</span></div>
+                <div class='value none' style='width:38%;'>Minimal <span>(12 Recalls)</span></div>
+            </div>
+        </div>
+        <div class='chart'>
+            <div class='title'>Top Categories</div>
+            <div style='position: relative'>
+                <div class='value food inverted'><i class='fal fal-bread-loaf'></i> Food <span>(29 Recalls)</span></div>
+                <div class='value food'>Food <span>(29 Recalls)</span></div>
+            </div>
+            <div style='position: relative'>
+                <div class='value drugs inverted'>Drugs and Supplements <span>(11 Recalls)</span></div>
+                <div class='value drugs' style='width:38%;'>Drugs and Supplements <span>(11 Recalls)</span></div>
+            </div>
+            <div style='position: relative'>
+                <div class='value home inverted'>Home Products <span>(9 Recalls)</span></div>
+                <div class='value home' style='width:31%;'>Home Products <span>(9 Recalls)</span></div>
+            </div>
+        </div>
+
+        <hr />
+        <h1>Branding</h1>
+        <div class='brand'>
+            <h2>Logo</h2>
+            <img src='logo.svg' style='width: 90%; margin: 5%;' />
+        </div>
+
+        <div class='brand'>
+            <h2>Icon</h2>
+            <img src='icon.svg' style='width: 100%;' />
+        </div>
+
+        <div class='brand' style='width:200px'>
+            <h2>Titled Logo</h2>
+            <img src='title-logo.svg' style='width: 100%'/>
+        </div>
+
+        <div class='brand' style='width:200px'>
+            <h2>Stripe Logo (png)</h2>
+            <img src='stripe-logo.png' style='width: 100%;' />
+        </div>
+
+        <div class='brand'>
+            <h2>Filter Icon</h2>
+            <img src='filter.svg' style='width: 3rem' />
+        </div>
+
+        <hr/>
+        <h1>Recalls</h1>
+        <div class='chart' style='padding:0; text-align:center; width:620px;'>
+            <div class='top-pane expanded food'>
+                <div>
+                    <div style='font-size:1.1em;color:#fff;width:calc(50% - 0.6em); padding:0.2em 0 0 0.5em; text-align: left; display:inline-block; font-weight: 200;'>
+                       March 3, 2019
+                    </div>
+                    <div style='font-size:1.4em;width:calc(50% - 0.6em); padding:0.2em 0.5em 0 0; color:#fff; text-align: right; display:inline-block; font-weight: 200;'>
+                        <i class='fal fa-envelope' style='padding-right:0.4em;'></i>
+                        <div style='display:inline-block; position:relative;color:#E7E7E7;'>
+                            <i class='fal fa-mobile-alt'></i>
+                            <i class='fal fa-ban' style='color: #838383;position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);'></i>
+                        </div>
+                    </div>
+                </div>
+                <div class='recall-title' style='color: white'>
+                    Sunstone Organics Issues Voluntary Nationwide Recall of Select Kratom Products Due to Potential Contamination by Salmonella&hellip;
+                </div>
+                <div class='category-icon category-icon-top'>
+                    <div class='category-icon-outer'></div>
+                    <div class='category-icon-inner food-light'></div>
+                    <i class='fal fa-bread-loaf category-icon-icon'></i>
+                </div>
+            </div>
+            <div class='bottom-pane'>
+                <div class='summary'>
+                    <div>
+                        <div><span>HEALTH RISK</span>: Minimal</div>
+                        <div><span>ALLERGENS</span>: Dairy</div>
+                        <div><span>CONTAMINANTS</span>: E.Coli</div>
+                    </div>
+                    <div class='effective'>
+                        <div><span>EFFECTIVE</span>: March 3, 2019</div>
+                    </div>
+                </div>
+                <div class='recall-description'>
+                    Springfield, OR, Sunstone Organics is voluntarily recalling two lots of Sunstone Organics Kratom.
+                    These two lots include Sunstone Organics White Vein Kratom Lot 119 and Sunstone Organics Maeng Da Kratom Lot
+                    124A in both capsules and powder form and in all sizes.
+                    The products have been found to potentially be contaminated with salmonella.
+                </div>
+                <div class='actions'>
+                    <div>Read the <a href='#'>PRESS RELEASE</a></div>
+                    <div class='more'>LESS</div>
+                </div>
+            </div>
+        </div>
+        <div class='waiting'><i class='fal fa-spinner fa-pulse'></i></div>
+
+        <hr />
+        <h1>March 3 &mdash; 12, 2019</h1>
+        <div class='chart' style='padding:0; text-align:center; width:280px;'>
+            <div class='top-pane' style='background-color:transparent;'>
+                <div>
+                    <div style='width:calc(50% - 0.6em); padding:0.5em 0 0 0.5em; text-align: left; display:inline-block; font-weight: 200;'>
+                        <div style='font-size:1.1em;'>March 3, 2019</div>
+                    </div>
+                    <div style='width:calc(50% - 0.6em); padding:0.5em 0.5em 0 0; text-align: right; display:inline-block; font-weight: 200;'>
+                        <div style='font-size:1.4em;'>
+                            <i class='fal fa-envelope' style='padding-right:0.4em;'></i>
+                            <div style='display:inline-block; position:relative;color:#9B9B9B;'>
+                                <i class='fal fa-mobile-alt'></i>
+                                <i class='fal fa-ban' style='color: #6a6a6a;position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='recall-title'>
+                    Big Beef Importers recalled a whole lot of cow due to Salmonella.
+                </div>
+            </div>
+            <div class='bottom-pane expanded electronics'>
+                <div class='category-icon-bottom'>
+                    <div class='category-icon'>
+                        <div class='category-icon-outer'></div>
+                        <div class='category-icon-inner electronics-light'></div>
+                        <i class='fal fa-battery-bolt category-icon-icon'></i>
+                    </div>
+                </div>
+                <div class='summary'>
+                    <div><span>Health Risk</span>: Minimal</div>
+                    <div><span>Allergens</span>: Dairy</div>
+                    <div><span>Contaminants</span>: E.Coli</div>
+                </div>
+            </div>
+        </div>
+        <div class='chart' style='padding:0; text-align:center; width:280px;'>
+            <div class='top-pane' style='background-color:transparent;'>
+                <div>
+                    <div style='width:calc(50% - 0.6em); padding:0.5em 0 0 0.5em; text-align: left; display:inline-block; font-weight: 200;'>
+                        <div style='font-size:1.1em;'>March 3, 2019</div>
+                    </div>
+                    <div style='width:calc(50% - 0.6em); padding:0.5em 0.5em 0 0; text-align: right; display:inline-block; font-weight: 200;'>
+                        <div style='font-size:1.4em;'>
+                            <i class='fal fa-envelope' style='padding-right:0.4em;'></i>
+                            <div style='display:inline-block; position:relative;color:#9B9B9B;'>
+                                <i class='fal fa-mobile-alt'></i>
+                                <i class='fal fa-ban' style='color: #6a6a6a;position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='recall-title'>
+                    Big Beef Importers recalled a whole lot of cow due to Salmonella.
+                </div>
+            </div>
+            <div class='bottom-pane expanded electronics'>
+                <div class='category-icon-bottom'>
+                    <div class='category-icon'>
+                        <div class='category-icon-outer'></div>
+                        <div class='category-icon-inner electronics-light'></div>
+                        <i class='fal fa-battery-bolt category-icon-icon'></i>
+                    </div>
+                </div>
+                <div class='summary'>
+                    <div><span>Health Risk</span>: Minimal</div>
+                    <div><span>Allergens</span>: Dairy</div>
+                    <div><span>Contaminants</span>: E.Coli</div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        <div class='chart list'>
+            <ul class='fa-ul'>
+                <li><span class='fa-li'><i class='fal fa-check'></i></span>Rapid notification of food, drug, and product recalls</li>
+                <li><span class='fa-li'><i class='fal fa-check'></i></span>Track recalls from the CPSC, FDA, USDA, and NHTSA</li>
+                <li><span class='fa-li'><i class='fal fa-check'></i></span>Customize to your interests</li>
+                <li><span class='fa-li'><i class='fal fa-check'></i></span>Share with friends</li>
+            </ul>
+        </div>
+        <div class='chart list notes'>
+            <ul>
+                <li>Recalls limited to those published through public feeds</li>
+                <li>NHTSA recalls limited to carseats</li>
+            </ul>
+        </div>
+
+    </body>
+</html>

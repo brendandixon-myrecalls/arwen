@@ -1,0 +1,111 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Lato" href="https://fonts.googleapis.com/css?family=Lato" />
+    <mj-preview>Weekly Recall Alerts</mj-preview>
+    <mj-style>
+      .main { padding:20px 10px !important; }
+      .link { padding-top: 8px; }
+      .link a { color: #729BFF; display: inline-block; font-variant: small-caps; padding-left: 5px; text-decoration: none; }
+      .list { padding: 0 20px 25px 30px; margin: 0 }
+    </mj-style>
+    <mj-title>Weekly Recall Alerts</mj-title>
+  </mj-head>
+  <mj-body background-color="#414141" css-class="main">
+    
+    <mj-section
+                padding="20px 0 10px 0"
+                background-color="#414141">
+    </mj-section>
+    <mj-section
+                padding="5px 10px 15px 10px"
+                border-radius="4px 4px 0 0"
+                background-color="#1d2948">
+     	<mj-column padding="0">
+       	<mj-image
+                  width="200px"
+                  src="https://myrecalls.today/mail-logo-280x86.png"
+                  title="myRecalls"
+                  />
+       	<mj-text
+                 padding="0"
+                 align="center"
+                 color="#ffffff"
+                 font-family="Lato, Helvetica, Arial, sans-serif"
+                 font-size="18px"
+                 font-weight="500"
+                 line-height="24px">
+          Weekly Recalls
+          <div>${date}</div>
+       	</mj-text>
+     	</mj-column>
+    </mj-section>
+    <mj-section
+                padding="0"
+                border-radius="0 0 4px 4px"
+                background-color="#fff">
+      <mj-column padding="10px">
+        <mj-text
+                 padding="0"
+                 color="#000"
+                 font-family="Lato, Helvetica, Arial, sans-serif"
+                 font-size="16px"
+                 font-weight="300"
+                 line-height="20px">
+                 ${content}
+        </mj-text>
+        <mj-button css-class="body-text"
+                   href="https://myrecalls.today/recalls"
+                   background-color="#fff"
+                   border="1px solid #729BFF"
+                   color="#729BFF"
+                   padding="0"
+                   font-family="Lato, Helvetica, Arial, sans-serif"
+                   font-size="14px"
+                   font-weight="300"
+                   line-height="16px"
+                   inner-padding="8px"
+                   text-transform="uppercase"
+                   align="right">
+          All Recalls
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="10px" background-color="#414141">
+      <mj-column padding="0 5px">
+        <mj-text
+                 padding="25px 0 0 0"
+                 align="center"
+                 color="#FFFFFF"
+                 font-family="Lato, Helvetica, Arial, sans-serif"
+                 font-size="12px"
+                 font-weight="300"
+                 line-height="16px">
+          myRecalls delivers timely notifications of product and vehicle recalls to keep you and your family safe.
+        </mj-text>
+        <mj-text
+                 padding="5px 0 0 0"
+                 align="center"
+                 color="#FFFFFF"
+                 font-family="Lato, Helvetica, Arial, sans-serif"
+                 font-size="12px"
+                 font-weight="300"
+                 line-height="16px">
+          You received this email because you have a subscription with myRecalls.
+        </mj-text>
+        <mj-text
+                 padding="15px 0 0 0"
+                 align="center"
+                 color="#FFFFFF"
+                 font-family="Lato, Helvetica, Arial, sans-serif"
+                 font-size="12px"
+                 font-weight="300"
+                 line-height="16px">
+          Learn more at <a style="color: #FFFFFF" href="https://myrecalls.today/">https://myrecalls.today/</a><br/>
+          Update settings at <a style="color: #FFFFFF" href="https://myrecalls.today/settings/">https://myrecalls.today/settings/</a><br/>
+          Contact us at <a style="color: #FFFFFF" href="mailto:info@myrecalls.today">info@myrecalls.today</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

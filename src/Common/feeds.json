@@ -1,0 +1,62 @@
+[
+    {
+        "name": "carseats",
+        "source": "nhtsa",
+        "title": "NHTSA",
+        "url": "https://www-odi.nhtsa.dot.gov/rss/feeds/rss_recalls_C.xml",
+        "categories": [
+            "home"
+        ]
+    },
+    {
+        "name": "cpsc",
+        "source": "cpsc",
+        "title" : "CPSC",
+        "url": "https://www.cpsc.gov/Newsroom/CPSC-RSS-Feed/Recalls-RSS"
+    },
+    {
+        "name": "fda",
+        "source": "fda",
+        "title" : "FDA",
+        "url-json": "https://www.fda.gov/files/api/datatables/static/recalls-market-withdrawals.json",
+        "url-original-page": "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts",
+
+        "url-rss-original": "https://www.fda.gov/AboutFDA/ContactFDA/StayInformed/RSSFeeds/Recalls/rss.xml",
+        "url-web" : "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts",
+
+        "url-food-outbreaks": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/fda-outbreaks/rss.xml",
+
+        "url-allergies": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/food-allergies/rss.xml",
+        "url-drugs": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/drug-recalls/rss.xml",
+        "url-food-safety": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/food-safety-recalls/rss.xml",
+
+        "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/recalls/rss.xml"
+    },
+    {
+        "name": "tires",
+        "source": "nhtsa",
+        "title" : "NHTSA",
+        "url": "https://www-odi.nhtsa.dot.gov/rss/feeds/rss_recalls_T.xml",
+        "categories": [
+            "tires"
+        ]
+    },
+    {
+        "name": "usda",
+        "source": "usda",
+        "title" : "USDA",
+        "url": "https://www.fsis.usda.gov/wps/wcm/connect/fsis-content/rss/recalls",
+        "categories": [
+            "food"
+        ]
+    },
+    {
+        "name": "vehicles",
+        "source": "nhtsa",
+        "title": "NHTSA",
+        "url": "https://www-odi.nhtsa.dot.gov/rss/feeds/rss_recalls_V.xml",
+        "categories": [
+            "vehicles"
+        ]
+    }
+]

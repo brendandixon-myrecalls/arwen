@@ -1,0 +1,107 @@
+<mjml>
+  <mj-head>
+    <mj-font name="Lato" href="https://fonts.googleapis.com/css?family=Lato" />
+    <mj-preview>2017 TOYOTA PRIUS Recall</mj-preview>
+    <mj-style>
+      .main { padding:20px 10px !important; }
+    </mj-style>
+    <mj-title>2017 TOYOTA PRIUS Recall</mj-title>
+  </mj-head>
+  <mj-body background-color="#414141" css-class="main">
+    
+    <mj-section
+                padding="20px 0 10px 0"
+                background-color="#414141">
+    </mj-section>
+    <mj-section
+                padding="5px 10px 10px 10px"
+                border-radius="4px 4px 0 0"
+                background-color="#1d2948">
+     	<mj-column padding="0">
+       	<mj-image
+                  width="200px"
+                  src="https://myrecalls.today/mail-logo-280x86.png"
+                  title="myRecalls"
+                  />
+       	<mj-text
+                 color="#f0f0f0"
+                 padding="0"
+                 align="center"
+                 font-family="Lato, Helvetica, Arial, sans-serif"
+                 font-size="18px"
+                 font-weight="500"
+                 line-height="24px">
+         	2017 TOYOTA PRIUS<br/>Vehicle Recall
+       	</mj-text>
+     	</mj-column>
+    </mj-section>
+    <mj-section
+                padding="0"
+                border-radius="0 0 4px 4px"
+                background-color="#f0f0f0">
+      <mj-column padding="10px">
+        <mj-text
+                 padding="5px 5px"
+                 color="#000"
+                 font-family="Lato, Helvetica, Arial, sans-serif"
+                 font-size="16px"
+                 font-weight="300"
+                 line-height="20px">
+          Removing the key while the shift lever is in a position other than "Park" increases the risk of an unintended vehicle rollaway&hellip;
+        </mj-text>
+        <mj-button css-class="body-text"
+                   href="https://myrecalls.today/xxxxxxx"
+                   background-color="#f0f0f0"
+                   border="1px solid #000"
+                   color="#000"
+                   padding="5px 0 0"
+                   font-family="Lato, Helvetica, Arial, sans-serif"
+                   font-size="14px"
+                   font-weight="300"
+                   line-height="16px"
+                   inner-padding="8px"
+                   text-transform="uppercase"
+                   align="right">
+          Learn More
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="10px" background-color="#414141">
+      <mj-column padding="0 5px">
+        <mj-text
+                 padding="25px 0 0 0"
+                 align="center"
+                 color="#FFFFFF"
+                 font-family="Lato, Helvetica, Arial, sans-serif"
+                 font-size="12px"
+                 font-weight="300"
+                 line-height="16px">
+          myRecalls delivers timely notifications of product and vehicle recalls to keep you and your family safe.
+        </mj-text>
+        <mj-text
+                 padding="5px 0 0 0"
+                 align="center"
+                 color="#FFFFFF"
+                 font-family="Lato, Helvetica, Arial, sans-serif"
+                 font-size="12px"
+                 font-weight="300"
+                 line-height="16px">
+          You received this email because you have a subscription with myRecalls.
+        </mj-text>
+        <mj-text
+                 padding="15px 0 0 0"
+                 align="center"
+                 color="#FFFFFF"
+                 font-family="Lato, Helvetica, Arial, sans-serif"
+                 font-size="12px"
+                 font-weight="300"
+                 line-height="16px">
+          Learn more at <a style="color: #FFFFFF" href="https://myrecalls.today/">https://myrecalls.today/</a><br/>
+          Update settings at <a style="color: #FFFFFF" href="https://myrecalls.today/settings/">https://myrecalls.today/settings/</a><br/>
+          Contact us at <a style="color: #FFFFFF" href="mailto:info@myrecalls.today">info@myrecalls.today</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
